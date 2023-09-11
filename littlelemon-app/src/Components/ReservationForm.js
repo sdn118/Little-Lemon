@@ -25,12 +25,14 @@ function handleDateChange(e) {
   setSelectedTime(props.availableTimes.map((times) => <option>{times}</option>));
 }
 
+
 const validateForm = () => {
   let error = ""
 
   if (fName === "") {
     error.fName = "First Name required."
   }
+  
 
   if (lName === "") {
     error.lName = "Last Name required."
@@ -38,6 +40,10 @@ const validateForm = () => {
 
   if (email === "") {
     error.email = "Email required."
+  } else if (email === "/^+([-]?+)*@+([-]?+)*({2,3})+$/") {
+    error.email = "Email invalid"
+  } else {
+    console.email("success")
   }
 
 
@@ -53,6 +59,7 @@ const validateForm = () => {
   return Object.keys(error).length <1;
 
 }
+
 
 
 
