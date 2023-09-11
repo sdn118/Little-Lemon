@@ -32,7 +32,6 @@ const validateForm = () => {
   if (fName === "") {
     error.fName = "First Name required."
   }
-  
 
   if (lName === "") {
     error.lName = "Last Name required."
