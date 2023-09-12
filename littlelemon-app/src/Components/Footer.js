@@ -27,7 +27,7 @@ function Footer(){
       <li><a href="#Address">Address</a></li>
     </ul>
 
-    <ul class="container_4">
+    <ul className="container_4">
           <h4>Social Media</h4>
           <li><a href="#">Instagram</a></li>
           <li><a href="#">Twitter</a></li>
