@@ -82,33 +82,33 @@ const handleSubmit = (event) => {
       className="reservation"
       onSubmit={handleSubmit}>
 
-        <label htmlFor="FName">First Name</label>
-        <input type="text" 
-        id="fName" 
-        name="fName" 
-        required value={fName} 
+        <label htmlFor="fName">First Name</label>
+        <input type="text"
+        id="fName"
+        name="fName"
+        required value={fName}
         placeholder="First Name"
         onChange={(e) => setFName(e.target.value)}
         />
         <span className="non-valid">{error.fName}</span>
 
 
-        <label htmlFor="LName">Last Name</label>
-        <input type="text" 
-        id="lName" 
-        name="lName" 
-        required value={lName}  
+        <label htmlFor="lName">Last Name</label>
+        <input type="text"
+        id="lName"
+        name="lName"
+        required value={lName}
         placeholder="Last Name"
         onChange={(e) => setLName(e.target.value)}
         />
         <span className="non-valid">{error.lName}</span>
 
-        
+
         <label htmlFor="email">Email</label>
-        <input type="email" 
-        id="email" 
-        name="email" 
-        required value={email}  
+        <input type="email"
+        id="email"
+        name="email"
+        required value={email}
         placeholder="Email"
         onChange={(e) => setEmail(e.target.value)}
         />

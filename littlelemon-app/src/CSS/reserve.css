@@ -42,11 +42,12 @@ main h1{
 }
 
 main h2{
-align-self: center;  
-margin-top: 55px;
+  text-align: center;
+  position: relative;
+  margin-top: 55px;
 }
 
-#Fname{
+#fname{
   margin-left: 43em;
   margin-top: 55px;
   background-color: rgb(238, 238, 238);
@@ -59,7 +60,7 @@ margin-top: 55px;
   font-size: larger;
 }
 
-#Lname{
+#lname{
   margin-left: 43em;
   margin-top: 55px;
   background-color: rgb(238, 238, 238);
