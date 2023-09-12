@@ -1,9 +1,9 @@
-import Headtwo from "./ReservationHead"
 import ReservationForm from "./ReservationForm";
 import { useReducer } from "react";
 import {fetchAPI} from "../API/Api";
 import Footer from "./Footer";
-import Reservehead from "../ReservationHead";
+import Headtwo from "../ReservationHead";
+
 
 function Reservationpage() {
 

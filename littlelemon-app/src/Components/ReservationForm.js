@@ -144,22 +144,27 @@ const handleSubmit = (event) => {
           />
           <span className="non-valid">{error.guest}</span>
 
-          <label htmlFor="occasion">Occassion</label>
-          <select
-          id="occasion"
+
+          
+        <div className="dropdown">
+        <label htmlFor="occasion">Occassion</label>
+        <select
+          className="dropdowncnt"
           required value={occasion}
           onChange={(e) => setOccasion(e.target.value)} >
-            <option>None</option>
-            <option>Birthday</option>
-            <option>Engagement</option>
-            <option>Anniversary</option>
+            <option value="none">None</option>
+            <option value="birthday">Birthday</option>
+            <option value="anniversary">Anniversary</option>
+            <option value="engagement">Engagement</option>
           </select>
+        </div>
 
 
 
-          <button>
-            Confirm Reservation
-          </button>
+
+        <div>
+          <input type="submit" id="submit" name="submit"/>
+        </div>
 
       </form>
     </div>

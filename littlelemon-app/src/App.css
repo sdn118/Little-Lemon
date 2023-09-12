@@ -449,16 +449,15 @@ label{
 }
 
 .dropdown label{
-  margin-left: 33em;
-  margin-bottom: 50px;
+  margin-left: 32em;
+  margin-right: 31em;
   background-color: rgb(238, 238, 238);
   border: none;
   border-radius: 2px;
   line-height: 1.5em;
   font-weight: bold;
   font-size: 25px;
-  padding-left: 5px;
-  padding-right: 138px;
+
 }
 
 
@@ -475,7 +474,6 @@ label{
   line-height: 1.5em;
   font-weight: bold;
   font-size: 15px;
-  
 }
 
 .dropdown a {
@@ -495,9 +493,9 @@ label{
   margin-bottom: 60px;
   background-color: #F4CE14;
   border: none;
-  border-radius: 2px;
-  padding-left: 10px;
-  padding-right: 15px;
+  border-radius: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
   line-height: 1.5em;
   font-weight: bold;
   font-size: 40px;
@@ -534,3 +532,12 @@ label{
   font-size: small;
   color: white;
 }
+
+
+.img2{
+  width: 100vw;
+  height: 30rem;
+  object-fit: cover;
+  margin-left: -.5em;
+}
+
