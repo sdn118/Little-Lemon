@@ -42,9 +42,8 @@ main h1{
 }
 
 main h2{
-  text-align: center;
-  position: relative;
-  margin-top: 55px;
+align-self: center;  
+margin-top: 55px;
 }
 
 #Fname{
