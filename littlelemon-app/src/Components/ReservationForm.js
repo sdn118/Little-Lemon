@@ -43,7 +43,7 @@ const validateForm = () => {
   } else if (email === "/^+([-]?+)*@+([-]?+)*({2,3})+$/") {
     error.email = "Email invalid"
   } else {
-    console.email("success")
+    error.email("success")
   }
 
 
