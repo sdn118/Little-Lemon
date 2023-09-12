@@ -5,6 +5,8 @@ function Footer(){
 
   return(
     <footer>
+
+<div id="bottom">
     <img src= {Logo} alt="little lemon logo" className="logo"></img>
 
 
@@ -25,7 +27,14 @@ function Footer(){
       <li><a href="#Address">Address</a></li>
     </ul>
 
+    <ul class="container_4">
+          <h4>Social Media</h4>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Pinterest</a></li>
+        </ul>
 
+    </div>
     </footer>
   );
 }

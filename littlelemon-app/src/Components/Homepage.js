@@ -9,8 +9,8 @@ function Homepage(){
 
   return(
     <>
-    <Header />
     <Nav />
+    <Header />
     <Specials />
     <Testimonials />
     <About />

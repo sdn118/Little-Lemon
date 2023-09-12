@@ -75,7 +75,7 @@ const handleSubmit = (event) => {
 
   return(
   <>
-    <h1>Book a Table!</h1>
+    <h1 className="main">Book a Table!</h1>
     <div className="reserve-wrapper">
       <form
       id="reservation-form"

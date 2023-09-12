@@ -9,9 +9,9 @@ function Testimonials (){
 
   return(
   <section id="test">
-    <h2>Testimonials</h2>
+    <h2 className="title">Testimonials</h2>
 
-    <div classNamee="review-container">
+    <div className="review-container">
 
       <div className="review">
         <img src= {starrating} alt="review-rating" id="star" />

@@ -125,7 +125,8 @@ main h2{
   background-color: #f2efef;
   padding: 1em;
   display: block;
-  height: 20em;
+  height: 15em;
+  margin-bottom: 5em;
 }
 
 .card-img-1{
@@ -171,22 +172,33 @@ main h2{
   justify-content: center;
   flex-wrap: wrap;
   height: auto;
-  color: #F4CE14;
+  color: black;
   width: 100%;
   background-color: #495E57;
+  padding-top:5em;
+  padding-bottom: 5em;
+  padding-right: 5em;
+}
+
+.title{
+  text-align: center;
+  position: absolute;
+  font-size: 3em;
+  color: #F4CE14;;
+
 }
 
 .review-container{
   display: flex;
-  flex-wrap: wrap;
   height: auto;
   justify-content: center;
   width: 100%;
   color: black;
+  margin-top: 5em;
 }
 
 .review{
-  display: block;
+  display: inline-block;
   height: 230px;
   margin: 2em;
   width: 260px;
@@ -229,7 +241,7 @@ main h2{
   margin-left: 8px;
   text-align: center;
   font-size: 14px;
-  padding-top: 5px;
+  padding-right: 12px;
 }
 
 .four{
@@ -334,4 +346,191 @@ position: relative;
   list-style: none;
   display: block;
   font-size: large;
+}
+
+/* Reserve page */
+
+.main{
+  text-align: center;
+  position: relative;
+  margin-top: 55px;
+}
+
+label{
+  display: block;
+  line-height: 1.5em;
+  margin-top: 3em;
+  text-align: center;
+  font-weight: bold;
+  font-size: larger;
+
+}
+
+
+#fName{
+  margin-left: 43em;
+  margin-top: 55px;
+  background-color: rgb(238, 238, 238);
+  border: none;
+  border-radius: 2px;
+  padding-left: 10px;
+  padding-right: 29.5px;
+  line-height: 1.5em;
+  font-weight: bold;
+  font-size: larger;
+}
+
+#lName{
+  margin-left: 43em;
+  margin-top: 55px;
+  background-color: rgb(238, 238, 238);
+  border: none;
+  border-radius: 2px;
+  padding-left: 10px;
+  padding-right: 29.5px;
+  line-height: 1.5em;
+  font-weight: bold;
+  font-size: larger;
+}
+
+#email{
+  margin-left: 43em;
+  margin-top: 55px;
+  background-color: rgb(238, 238, 238);
+  border: none;
+  border-radius: 2px;
+  padding-left: 10px;
+  padding-right: 29.5px;
+  line-height: 1.5em;
+  font-weight: bold;
+  font-size: larger;
+}
+
+#date{
+  margin-left: 43em;
+  margin-top: 55px;
+  background-color: rgb(238, 238, 238);
+  border: none;
+  border-radius: 2px;
+  font-weight: bold;
+  font-size: larger;
+  padding-left: 10px;
+  padding-right: 4.5em;
+
+}
+
+#time{
+  margin-left: 43em;
+  margin-top: 55px;
+  background-color: rgb(238, 238, 238);
+  border: none;
+  border-radius: 2px;
+  line-height: 1.5em;
+  font-weight: bold;
+  font-size: larger;
+  padding-left: 10px;
+  padding-right: 10em;
+}
+
+#guest{
+  margin-left: 43em;
+  margin-top: 55px;
+  margin-bottom: 50px;
+  background-color: rgb(238, 238, 238);
+  border: none;
+  border-radius: 2px;
+  line-height: 1.5em;
+  font-weight: bold;
+  font-size: larger;
+  padding-left: 10px;
+  padding-right: 12em;
+
+
+}
+
+.dropdown label{
+  margin-left: 33em;
+  margin-bottom: 50px;
+  background-color: rgb(238, 238, 238);
+  border: none;
+  border-radius: 2px;
+  line-height: 1.5em;
+  font-weight: bold;
+  font-size: 25px;
+  padding-left: 5px;
+  padding-right: 138px;
+}
+
+
+.dropdowncnt{
+  margin-left: 57em;
+  display: none;
+  position: absolute;
+  border: none;
+  border-radius: 2px;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  line-height: 1.5em;
+  font-weight: bold;
+  font-size: 15px;
+  
+}
+
+.dropdown a {
+  color: black;
+  padding: 10px 13px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdowncnt a:hover {background-color: #ddd;}
+.dropdown:hover .dropdowncnt {display: block;}
+.dropdown:hover #occasion {background-color: #3e8e41;}
+
+#submit{
+  margin-left: 21.5em;
+  margin-top: 115px;
+  margin-bottom: 60px;
+  background-color: #F4CE14;
+  border: none;
+  border-radius: 2px;
+  padding-left: 10px;
+  padding-right: 15px;
+  line-height: 1.5em;
+  font-weight: bold;
+  font-size: 40px;
+  color: black;
+}
+
+.logo{
+  display: flex;
+  width: 10%;
+  margin-right: 5px;
+}
+
+#bottom{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #495E57;
+}
+
+#bottom a{
+  text-decoration: none;
+  color: white;
+}
+
+#bottom h4{
+  width: 100%;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.container_2{
+  list-style: none;
+  display: block;
+  font-size: small;
+  color: white;
 }
