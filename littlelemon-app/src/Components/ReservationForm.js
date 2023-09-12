@@ -27,35 +27,36 @@ function handleDateChange(e) {
 
 
 const validateForm = () => {
-  let err = ""
+  let error = ""
 
   if (fName === "") {
-    err.fName = "First Name required."
+    error.fName = "First Name required."
   }
+  
 
   if (lName === "") {
-    err.lName = "Last Name required."
+    error.lName = "Last Name required."
   }
 
   if (email === "") {
-    err.email = "Email required."
+    error.email = "Email required."
   } else if (email === "/^+([-]?+)*@+([-]?+)*({2,3})+$/") {
-    err.email = "Email invalid"
+    error.email = "Email invalid"
   } else {
     console.email("success")
   }
 
 
   if (date === "") {
-    err.date= "Date required."
+    error.date= "Date required."
   }
 
   if (guest === "") {
-    err.guest = "Please select number of guest."
+    error.guest = "Please select number of guest."
   }
 
   setError("...error")
-  return Object.keys(err).length <1;
+  return Object.keys(error).length <1;
 
 }
 
@@ -89,7 +90,7 @@ const handleSubmit = (event) => {
         placeholder="First Name"
         onChange={(e) => setFName(e.target.value)}
         />
-        <span className="non-valid">{err.fName}</span>
+        <span className="non-valid">{error.fName}</span>
 
 
         <label htmlFor="LName">Last Name</label>
@@ -100,7 +101,7 @@ const handleSubmit = (event) => {
         placeholder="Last Name"
         onChange={(e) => setLName(e.target.value)}
         />
-        <span className="non-valid">{err.lName}</span>
+        <span className="non-valid">{error.lName}</span>
 
         
         <label htmlFor="email">Email</label>
@@ -111,7 +112,7 @@ const handleSubmit = (event) => {
         placeholder="Email"
         onChange={(e) => setEmail(e.target.value)}
         />
-        <span className="non-valid">{err.email}</span>
+        <span className="non-valid">{error.email}</span>
 
           <label htmlFor="date">Choose a Date</label>
 
@@ -122,7 +123,7 @@ const handleSubmit = (event) => {
           required value={date}
           onChange={handleDateChange}
           />
-          <span className="non-valid">{err.date}</span>
+          <span className="non-valid">{error.date}</span>
 
           <label htmlFor="time">Choose a Time</label>
           <select id="time" required>
@@ -141,7 +142,7 @@ const handleSubmit = (event) => {
           required value={guest}
           onChange={(e) => setGuest(e.target.value)}
           />
-          <span className="non-valid">{err.guest}</span>
+          <span className="non-valid">{error.guest}</span>
 
           <label htmlFor="occasion">Occassion</label>
           <select
