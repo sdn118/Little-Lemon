@@ -31,13 +31,20 @@ const validateForm = () => {
 
   if (fName === "") {
     error.fName = "First Name required."
+  } else if (fName > 7) {
+    error.fName = "First Name too long."
+  } else {
+    console.log("success")
   }
-  
 
   if (lName === "") {
     error.lName = "Last Name required."
+  } else if (lName < 10) {
+    error.lName = "Last Name too short."
+  } else {
+    console.log("success")
   }
-
+  
   if (email === "") {
     error.email = "Email required."
   } else if (email === "/^+([-]?+)*@+([-]?+)*({2,3})+$/") {
@@ -145,7 +152,7 @@ const handleSubmit = (event) => {
           <span className="non-valid">{error.guest}</span>
 
 
-          
+
         <div className="dropdown">
         <label htmlFor="occasion">Occassion</label>
         <select
