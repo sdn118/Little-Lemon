@@ -1,17 +1,15 @@
+import Footer from "./Footer";
+import Header from "./Header";
 
-function ConfirmationReservation() {
 
-
+function ConfirmedReservation() {
 
 return (
   <>
-
-    <div>
-
-    </div>
+    <Header />
     <Footer />
   </>
 );
 
 }
-export default ConfirmationReservation;
+export default ConfirmedReservation;

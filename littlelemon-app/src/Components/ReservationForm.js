@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const occasions=[
   {id:"1", name:"None"},
@@ -67,7 +68,7 @@ const validateForm = () => {
   return Object.keys(error).length <1
 }
 
-
+const navigate = useNavigate();
 
 
 const handleSubmit = (event) => {
@@ -180,7 +181,7 @@ const handleSubmit = (event) => {
         </div>
 
         <div>
-          <input type="submit" id="submit" name="submit"/>
+          <input type="submit" id="submit" name="submit" onClick={() => navigate ("/ConfirmedReservation")}/>
         </div>
 
       </form>
