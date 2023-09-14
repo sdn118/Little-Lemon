@@ -906,6 +906,24 @@ label{
     color: black;
   }
 
+  /* Confirmation */
+
+  .confirmation h2{
+    margin-bottom: 1em;
+  }
+  
+  .img4{
+    background-color: white;
+    height: 25em;
+    margin-left: 45em;
+  }
+  
+  .return{
+    margin-top: 5em;
+    margin-bottom: 5em;
+    margin-left: 66em;
+  }
+
 
   }
 

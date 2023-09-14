@@ -13,7 +13,7 @@ function Header(){
 
         <Link to="/reservation"><button className="but1"> <strong>Reserve a Table</strong></button></Link>
       </div>
-      <img src={restauranfood} alt="food" className="img2"></img>
+      <img src={restauranfood} alt="food" className="img2" />
     </header>
   );
 };
