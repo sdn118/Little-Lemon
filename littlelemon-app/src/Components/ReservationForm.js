@@ -1,4 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
+const occasions=[
+  {id:"1", name:"None"},
+  {id:"2", name:"Birthday"},
+  {id:"3", name:"Engagement"},
+  {id:"4", name:"Anniversary"},
+]
 
 function ReservationForm(props){
 
@@ -9,6 +16,11 @@ const [date, setDate] = useState("");
 const [guest, setGuest] = useState("");
 const [occasion, setOccasion] = useState("");
 const [error, setError] = useState("");
+
+
+useEffect(()=>{
+  setOccasion(occasions);
+}, []);
 
 const [selectedTime, setSelectedTime] = useState(
   props.availableTimes.map((times) => <option>{times}</option>)
@@ -27,32 +39,21 @@ function handleDateChange(e) {
 
 
 const validateForm = () => {
-  let error = ""
+  let error = false
 
   if (fName === "") {
     error.fName = "First Name required."
-  } else if (fName < 7) {
-    error.fName = "First Name too long."
-  } else {
-    console.log("success")
   }
 
   if (lName === "") {
     error.lName = "Last Name required."
-  } else if (lName > 10) {
-    error.lName = "Last Name too short."
-  } else {
-    console.log("success")
   }
 
   if (email === "") {
     error.email = "Email required."
   } else if (email === "/^+([-]?+)*@+([-]?+)*({2,3})+$/") {
     error.email = "Email invalid"
-  } else {
-    console.log("success")
   }
-
 
   if (date === "") {
     error.date= "Date required."
@@ -63,8 +64,7 @@ const validateForm = () => {
   }
 
   setError("...error")
-  return Object.keys(error).length <1;
-
+  return Object.keys(error).length <1
 }
 
 
@@ -73,6 +73,7 @@ const validateForm = () => {
 const handleSubmit = (event) => {
   event.preventDefault();
   console.table(props)
+
 
   let isValid = validateForm()
   if(isValid) {
@@ -154,20 +155,29 @@ const handleSubmit = (event) => {
 
 
         <div className="dropdown">
-        <label htmlFor="occasion">Occassion</label>
+
         <select
-          className="dropdowncnt"
-          required value={occasion}
-          onChange={(e) => setOccasion(e.target.value)} >
-            <option value="none">None</option>
-            <option value="birthday">Birthday</option>
-            <option value="anniversary">Anniversary</option>
-            <option value="engagement">Engagement</option>
+        id="dropdown-control"
+        name="dropdown-control"
+        type="dropdown-control"
+        required value= {occasion}
+        htmlFor="dropdown-control"
+        onChange={(e) => setOccasion(e.target.value)}
+        >
+          <option value="0">Select Occasion</option>
+        {
+            occasions &&
+            occasions !== undefined ?
+            occasions.map((ocs, index)=>{
+              return(
+                <option key={index} value={ocs.id}>{ocs.name}</option>
+              )
+            })
+            : "Occasion not selected"
+          }
+
           </select>
         </div>
-
-
-
 
         <div>
           <input type="submit" id="submit" name="submit"/>

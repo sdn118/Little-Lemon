@@ -22,16 +22,16 @@ function Footer(){
 
     <ul className="container_3">
       <h4>Contact Us!</h4>
-      <li><a href="#Phone">Phone</a></li>
+      <li><Link to="#Phone">Phone</Link></li>
       <li><a href="#Email">Email</a></li>
       <li><a href="#Address">Address</a></li>
     </ul>
 
     <ul className="container_4">
           <h4>Social Media</h4>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">Twitter</a></li>
-          <li><a href="#">Pinterest</a></li>
+          <li><Link to="#">Instagram</Link></li>
+          <li><Link to="#">Twitter</Link></li>
+          <li><Link to="#">Pinterest</Link></li>
         </ul>
 
     </div>

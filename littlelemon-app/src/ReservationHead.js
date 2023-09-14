@@ -1,23 +1,21 @@
+import {Link} from "react-router-dom";
 import Logo from "./assets/Logo.svg"
 import shrimpsalad from "./assets/shrimpsalad.jpg"
 
 function Headtwo(){
 
   return(
-    <header>
-
       <nav>
       <img src={Logo} alt="little lemon logo" className="img1"/>
-      <ul class="container">
-        <li><a href="#Home">Home</a></li>
-        <li><a href="#About">About</a></li>
-        <li><a href="#Reservation">Reservation</a></li>
-        <li><a href="#Contact">Contact</a></li>
-        <li><a href="#Login">Login</a></li>
+      <ul className="container">
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/">About</Link></li>
+          <li><Link to="/reservation">Reservation</Link></li>
+          <li><Link to="/">Contact</Link></li>
+          <li><Link to="/">Login</Link></li>
       </ul>
-      <img src={shrimpsalad} alt="shrimpsalad" className="img2"></img>
+      <img src={shrimpsalad} alt="shrimpsalad" className="img3"></img>
       </nav>
-    </header>
   );
 }
 
