@@ -953,10 +953,6 @@ label{
   .confirmation{
     text-align: center;
     font-size: larger;
-    width: 25em;
-    margin-left: 35em;
-    margin-bottom: 5em;
-    margin-top: 5em;
     line-height: 1.5em;
   }
   
@@ -967,14 +963,13 @@ label{
 
   .img4{
     background-color: white;
-    height: 25em;
-    margin-left: 45em;
+    height: 5em;
   }
 
   .return{
     margin-top: 5em;
     margin-bottom: 5em;
-    margin-left: 66em;
+    margin-left: Ho6em;
   }
 
 
