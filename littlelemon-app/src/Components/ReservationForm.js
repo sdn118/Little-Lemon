@@ -10,6 +10,8 @@ const occasions=[
 
 function ReservationForm(props){
 
+
+
 const [fName, setFName] = useState("")
 const [lName, setLName] = useState("")
 const [email, setEmail] = useState("")
@@ -17,7 +19,6 @@ const [date, setDate] = useState("");
 const [guest, setGuest] = useState("");
 const [occasion, setOccasion] = useState("");
 const [error, setError] = useState("");
-
 
 useEffect(()=>{
   setOccasion(occasions);
@@ -38,9 +39,8 @@ function handleDateChange(e) {
   setSelectedTime(props.availableTimes.map((times) => <option>{times}</option>));
 }
 
-
 const validateForm = () => {
-  let error = false
+  let error = ""
 
   if (fName === "") {
     error.fName = "First Name required."
@@ -68,19 +68,23 @@ const validateForm = () => {
   return Object.keys(error).length <1
 }
 
-const navigate = useNavigate();
 
 
-const handleSubmit = (event) => {
-  event.preventDefault();
-  console.table(props)
-
+const handleSubmit = (e) => {
+  e.preventDefault();
 
   let isValid = validateForm()
   if(isValid) {
-      alert("Submitted")
+    console.log("Submitted")
   }
 }
+
+const navigate = useNavigate();
+
+
+
+
+
 
   return(
   <>
