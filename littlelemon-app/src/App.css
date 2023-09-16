@@ -366,7 +366,7 @@ label{
 }
 
 
-#fName{
+#fname{
   margin-left: 43em;
   margin-top: 55px;
   background-color: rgb(238, 238, 238);
@@ -379,7 +379,7 @@ label{
   font-size: larger;
 }
 
-#lName{
+#phone{
   margin-left: 43em;
   margin-top: 55px;
   background-color: rgb(238, 238, 238);
@@ -838,7 +838,7 @@ label{
     font-size: medium;
   }
 
-  #fName{
+  #fname{
     margin-left: 6em;
     margin-top: 1em;
     background-color: rgb(238, 238, 238);
@@ -851,7 +851,7 @@ label{
     font-size: larger;
   }
 
-  #lName{
+  #phone{
     margin-left: 6em;
     margin-top: 1em;
     background-color: rgb(238, 238, 238);
@@ -1250,7 +1250,7 @@ label{
       font-size: medium;
     }
   
-    #fName{
+    #fname{
       margin-left: 13em;
       margin-top: 1em;
       background-color: rgb(238, 238, 238);
@@ -1263,7 +1263,7 @@ label{
       font-size: larger;
     }
   
-    #lName{
+    #phone{
       margin-left: 13em;
       margin-top: 1em;
       background-color: rgb(238, 238, 238);
