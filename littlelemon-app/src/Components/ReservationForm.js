@@ -44,6 +44,8 @@ function Reservationpage (props) {
     }
     if (inputFields.email.length < 5){
       errors.email = "Email is required"
+    } else if (inputFields.email === "/^([-]?)*@([-]?)*({2,3})+$/"){
+      errors.email = "Email is invalid"
     }
     if (inputFields.phone.length === "") {
       errors.phone = "Phone Number required"
@@ -53,11 +55,11 @@ function Reservationpage (props) {
       errors.phone = "Phone number too long"
     } else if (inputFields.phone === "/^([-]?)*@([-]?)*({2,3})+$/")
       errors.phone = "Phone number invalid"
-    if (inputFields.date === ""){
+    if (date === ""){
       errors.date = "Please select a date"
     }
-    if (inputFields.times === ""){
-      errors.times = "Please select a time"
+    if (selectedTime === ""){
+      errors.selectedTime = "Please select a time"
     }
     if (inputFields.guest === ""){
       errors.guest = "Please select a number of guest"
@@ -65,6 +67,7 @@ function Reservationpage (props) {
     if (inputFields.occasion === ""){
       errors.occasion = "Occasion not selected"
     }
+
     return errors;
   };
 
@@ -82,7 +85,7 @@ function Reservationpage (props) {
     console.log(inputFields);
   };
   useEffect(() => {
-    if (Object.keys(errors).length ===0 && submit) {
+    if (Object.keys(errors).length === 0 && submit) {
       finishSubmit();
     }
   });
@@ -96,14 +99,14 @@ function Reservationpage (props) {
 return(
 <div>
   <form id="reservationForm"
-   onSubmit={handleSubmit} 
-   className="reservation"
-   action="/ConfirmedReservation " method="POST">
+   onSubmit={handleSubmit}
+   className="reservation">
     <label htmlFor="fname">Full Name</label>
     <input type="text"
         id="fname"
        name="fname"
        placeholder="Full Name"
+       required
        value={inputFields.fname}
        onChange={handleChange}/>
        <span className="non-valid">{errors.fname}</span>
@@ -113,6 +116,7 @@ return(
         id="email"
         name="email"
         placeholder="Email"
+        required
         value={inputFields.email}
         onChange={handleChange}/>
         <span className="non-valid">{errors.email}</span>
@@ -122,6 +126,7 @@ return(
         id="phone"
         name="phone"
         placeholder="Phone Number"
+        required
         value={inputFields.phone}
         onChange={handleChange}/>
         <span className="non-valid">{errors.phone}</span>
@@ -130,7 +135,7 @@ return(
     <input type="date"
         id="date"
         name="date"
-        value={date}
+        required={date}
         onChange={handleDateChange}/>
         <span className="non-valid">{errors.date}</span>
 
@@ -139,9 +144,10 @@ return(
         id="time"
         name="time"
         required
+        value={selectedTime}
         onChange={handleChange}>{selectedTime}
         </select>
-        <span className="non-valid">{errors.times}</span>
+        <span className="non-valid">{errors.selectedTime}</span>
 
     <label htmlFor="guest">Guest</label>
     <input type="number"
@@ -155,11 +161,13 @@ return(
         <span className="non-valid">{errors.guest}</span>
 
       <label htmlFor="occasion">Occasion</label>
-      <select type="dropdown-control"
-        id="dropdown-control"
-        name="dropdown-control"
+      <select type="occasion"
+        id="occasion"
+        name="occasion"
+        required
+        value={inputFields.occasion}
         onChange={handleChange}>
-        <option value="0">Select Occasion</option>
+        <option value="0" type="option">Select Occasion</option>
           {
             occasion &&
             occasion !== undefined ?

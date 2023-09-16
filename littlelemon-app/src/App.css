@@ -447,7 +447,7 @@ label{
 
 }
 
-#dropdown-control{
+#occasion{
   margin-left: 34em;
   background-color: rgb(238, 238, 238);
   border: none;
@@ -458,7 +458,7 @@ label{
 }
 
 
-.dropdown a {
+.occasion a {
   color: black;
   padding: 10px 13px;
   text-decoration: none;
@@ -917,7 +917,7 @@ label{
   }
 
 
-  #dropdown-control{
+  #occasion{
     margin-left: 34em;
     background-color: rgb(238, 238, 238);
     border: none;
@@ -927,7 +927,7 @@ label{
     font-size: 5em;
   }
 
-  #dropdown-control option{
+  #occasion option{
     font-size: small;
   }
 
@@ -1328,7 +1328,7 @@ label{
       padding-right: 12em;
     }
   
-    #dropdown-control{
+    #occasion{
       margin-left: 11em;
       background-color: rgb(238, 238, 238);
       border: none;
