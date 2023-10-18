@@ -562,6 +562,7 @@ label{
   color: black;
 }
 
+
 /*Media*/
 @media only screen and (max-width: 480px) {
   /* styles for devices with a minimum screen width of 480px */
@@ -976,7 +977,7 @@ label{
   }
 
   @media only screen and (max-width: 740px) {
-    /* styles for devices with a maximum screen width of 480px */
+    /* styles for devices with a maximum screen width of 740px */
 
     .container{
       display: flex;
@@ -1382,4 +1383,4 @@ label{
       margin-left: 66em;
     }
   
-    }
+  }
